@@ -3,7 +3,7 @@ target_link_libraries(dbcparser_tests CANdbc ${CMAKE_THREAD_LIBS_INIT} gtest gte
 target_include_directories(dbcparser_tests PRIVATE ${CMAKE_SOURCE_DIR}/3rdParty/cpp-peglib/)
 add_test(NAME dbcparser_tests COMMAND dbcparser_tests)
 
-add_executable(opendbc_tests opedbc_tests.cpp)
+add_executable(opendbc_tests opendbc_tests.cpp)
 target_link_libraries(opendbc_tests CANdbc ${CMAKE_THREAD_LIBS_INIT} gtest gtest_main)
 target_compile_definitions(opendbc_tests PRIVATE OPENDBC_DIR="${CMAKE_CURRENT_SOURCE_DIR}/dbc/opendbc/")
 target_include_directories(opendbc_tests PRIVATE ${CMAKE_SOURCE_DIR}/3rdParty/cpp-peglib/)
